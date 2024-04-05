@@ -4,7 +4,8 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='relative'>
+      <div className='fixed z-20'>Hello</div>
       <LandingPage />
     </div>
   )

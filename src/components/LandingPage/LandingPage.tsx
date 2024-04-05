@@ -52,11 +52,8 @@ const LandingPage = () => {
 
   return (
     <>
-  <div ref={container} id="mainContainer" className="flex h-screen relative " >
-      <div className='bg-blue-400  text-3xl text-white panel  w-screen h-[30%] flex items-center my-auto flex-shrink-0 '>Page1
-      
-      <div className="sticky">Hello</div>
-      </div>
+  <div ref={container} id="mainContainer" className="flex h-screen  " >
+      <div className='bg-blue-400  text-3xl text-white panel  w-screen h-[30%] flex items-center my-auto flex-shrink-0 '>Page1      </div>
       <div className='bg-green-400 text-3xl text-white panel w-screen flex-shrink-0 '>Page2</div>
       <div className='bg-yellow-400 text-3xl text-white panel w-screen flex-shrink-0 '>Page3</div>
       <div className='bg-orange-400 text-3xl text-white panel w-screen   flex-shrink-0 '>Page4</div>
