@@ -32,11 +32,9 @@ const LandingPage = () => {
         // snap: 1 / (sections.length - 1),
         start:"center center",
         scrub: 1,
-        end: () =>{
-          const mainContainer = "+=" + document.querySelector<HTMLElement>("#mainContainer")?.offsetWidth;
-
-          console.log("main",mainContainer, typeof(mainContainer));
-          return mainContainer
+        end: () => {
+          const mainContainer = document.querySelector<HTMLElement>("#mainContainer");
+          return mainContainer ? `+=${mainContainer.offsetWidth}` : "+=0";
         } ,
         markers:{
           startColor: "purple",
