@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const loading = () => {
   return (
-    <div>loading..</div>
-  )
-}
+    <div className="flex justify-center items-center h-screen">loading..</div>
+  );
+};
 
-export default loading
+export default loading;

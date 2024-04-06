@@ -10,7 +10,7 @@ import Link from "next/link";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const LandingPage = () => {
+const Portfolio = () => {
   const container = useRef<HTMLDivElement>(null);
 
   const router = useRouter();
@@ -48,11 +48,6 @@ const LandingPage = () => {
         },
       });
 
-      // gsap.to(".hello", {
-      //   x: 400,
-      //   duration: 4,
-      // });
-
       const screenWidth = window.innerWidth;
 
       console.log("width = ", screenWidth);
@@ -73,29 +68,12 @@ const LandingPage = () => {
     { scope: container }
   );
 
-  // Function to define the onclick animation
-  const onClickAnimation = () => {
-    console.log("Inside onclick");
-
-    const totalContentWidth = 4 * window.innerWidth;
-
-    gsap.to(".hello", {
-      x: -totalContentWidth,
-      duration: 0.6,
-      ease: "power2.in",
-      onComplete: () => {
-        router.push("/portfolio");
-      },
-    });
-  };
-
   return (
     <>
       <div ref={container} id="mainContainer">
         <div className="flex h-screen hello ">
-          <div className="bg-blue-400  text-3xl text-white panel h-[75vh] my-auto  w-[96vw] ml-[4vw] flex-shrink-0 ">
-            Page1
-            <button onClick={onClickAnimation}>Click me</button>
+          <div className="bg-purple-400  text-3xl text-white panel h-[75vh] my-auto  w-[96vw] ml-[4vw] flex-shrink-0 ">
+            Portfolio Page
           </div>
           <div className="bg-green-400 text-3xl text-white panel h-[75vh] my-auto w-screen flex-shrink-0 ">
             Page2
@@ -112,4 +90,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Portfolio;
